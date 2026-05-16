@@ -21,17 +21,17 @@ console.log(responsive);
 
 let service1 = prompt('Какой сервис нужен?');
 console.log(service1);
-let servicePrice1 = prompt('Сколько это будет стоить?');
+let servicePrice1 = +prompt('Сколько это будет стоить?');
 console.log(servicePrice1);
 let service2 = prompt('Какой еще сервис тебе нужен?');
 console.log(service2);
-let servicePrice2 = prompt('Сколько это будет стоить?');
+let servicePrice2 = +prompt('Сколько это будет стоить?');
 console.log(servicePrice2);
 
-fullPrice = +servicePrice1 + +servicePrice2 + screenPrice;
-console.log(fullPrice);
+fullPrice = servicePrice1 + servicePrice2 + screenPrice;
+console.log((fullPrice), 'Стоимость всех услуг без скидки');
 let servicePercentPrice = Math.round(fullPrice - fullPrice * 0.15);
-console.log(servicePercentPrice);
+console.log((servicePercentPrice), 'Сумма после вычета 15% подрядчику');
 
 if (fullPrice > 50000) {
     console.log('Даем скидку в 10%');
